@@ -12,8 +12,7 @@
 function mainFunction(defaultPanel) {
     function buildUI(defaultPanel) {
         var dialog = defaultPanel instanceof Panel ? defaultPanel : new Window('palette', 'DrowningYu');
-        // 设置 dialog 的位置
-dialog.location = [0, 0]; 
+
 
 
 
