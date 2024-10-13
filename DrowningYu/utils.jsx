@@ -80,10 +80,9 @@ function applyPresetToLayer(layer, presetFileName) {
     app.endUndoGroup();
 }
 
-
-
-
-
+function aalert(data){
+    alert(data);
+}
 
 
 
@@ -113,6 +112,33 @@ function creatFolder(rootPath, newFolderName, alertFlag) {
         }
     }
     return newFolderPath;
+}
+
+
+
+function cleanFilesInFolder(path) {
+    // 定义 temp 文件夹路径
+    var folder = new Folder(path);
+    
+    // 检查 temp 文件夹是否存在
+    if (!folder.exists) {
+        alert(path+"目录不存在:");
+        return;
+    }
+    // 获取 temp 文件夹中的所有文件
+    var files = folder.getFiles();
+    // 遍历并删除所有文件
+    for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        // 检查是否是文件（而不是文件夹）
+        if (file instanceof File) {
+            var success = file.remove(); // 删除文件
+            if (!success) {
+                alert("无法删除文件: " + file.fsName);
+            }
+        }
+    }
+    // alert("Temp 文件夹中的所有文件已被清除。");
 }
 
 
