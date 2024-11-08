@@ -214,8 +214,8 @@ function getSettings() {
         var jsonContent = JSON.parse(fileContent); // 将字符串转换为 JSON 对象
         return jsonContent;
     } catch (e) {
-        alert("settings.json文件内容错误：" + e.message);
-        alert("重新创建settings.json");
+        //alert("settings.json文件内容错误：" + e.message);
+        //alert("重新创建settings.json");
         var data=createSettings();
         saveSettings(data);
         return data;
@@ -236,7 +236,7 @@ function saveSettings(settings) {
         filePath.close();                 // 关闭文件
         // alert("设置已保存至 settings.json 文件");
     } catch (e) {
-        alert("写入文件时发生错误：" + e.message);
+        //alert("写入文件时发生错误：" + e.message);
     }
 }
 
