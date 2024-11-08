@@ -1,3 +1,5 @@
 将DrowningYu.jsx文件和DrowningYu文件夹都放到该目录下即可
 
 ……\Adobe After Effects 202X\Support Files\Scripts\ScriptUI Panels（你的AE安装目录）
+
+如果是要更新 直接覆盖即可
