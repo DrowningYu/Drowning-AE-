@@ -1,0 +1,11 @@
+{
+    "menu": 0,
+    "createNull": {
+        "isNullCenter": false,
+        "cameraSettings": 2
+    },
+    "lyricYu": {
+        "isTranslation": true,
+        "compFrame": "50"
+    }
+}

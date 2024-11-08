@@ -231,14 +231,3 @@ function getData(songID) {
 }
 
 
-
-function getLyrics(dataString) {
-    var lyrics = [];
-    var regex = /"lyric":"(.*?)"/g; // 匹配 "lyric":"..." 格式的内容
-    var match;
-    // 遍历所有匹配项并提取内容
-    while ((match = regex.exec(dataString)) !== null) {
-        lyrics.push(match[1]); // 提取括号中的内容
-    }
-    return lyrics;
-}
