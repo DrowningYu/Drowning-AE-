@@ -139,6 +139,26 @@ def unzip_file(zip_path, extract_path=None):
 
 
 
+# def download_github_repo(repo_url):
+#     # 构造下载 URL（.zip 格式）
+#     download_url = f"{repo_url}/archive/refs/heads/main.zip"
+    
+#     # 获取当前脚本所在目录
+#     script_dir = os.path.dirname(os.path.abspath(__file__))
+#     zip_filename = os.path.join(script_dir, "DrowningYu_AE_Tools.zip")
+    
+#     # 发送 HTTP 请求下载文件
+#     response = requests.get(download_url)
+    
+#     # 检查请求是否成功
+#     if response.status_code == 200:
+#         with open(zip_filename, "wb") as file:
+#             file.write(response.content)
+#         print(f"Download successful, The file is saved as: {zip_filename}")
+#     else:
+#         print(f"download failed : {response.status_code}")
+#     return zip_filename
+
 def download_github_repo(repo_url):
     # 构造下载 URL（.zip 格式）
     download_url = f"{repo_url}/archive/refs/heads/main.zip"
@@ -147,8 +167,8 @@ def download_github_repo(repo_url):
     script_dir = os.path.dirname(os.path.abspath(__file__))
     zip_filename = os.path.join(script_dir, "DrowningYu_AE_Tools.zip")
     
-    # 发送 HTTP 请求下载文件
-    response = requests.get(download_url)
+    # 发送 HTTP 请求下载文件，关闭 SSL 验证
+    response = requests.get(download_url, verify=False)
     
     # 检查请求是否成功
     if response.status_code == 200:
@@ -156,10 +176,8 @@ def download_github_repo(repo_url):
             file.write(response.content)
         print(f"Download successful, The file is saved as: {zip_filename}")
     else:
-        print(f"download failed : {response.status_code}")
+        print(f"Download failed: {response.status_code}")
     return zip_filename
-
-
 
 
 
