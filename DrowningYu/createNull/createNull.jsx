@@ -37,11 +37,11 @@ function applyCreateNull() {
 
     }
 
-    alert("无相机和聚光灯图层");
+    // alert("无相机和聚光灯图层");
 
 
     if (selectedLayers.length === 1) {
-        alert("singleLayer");
+        // alert("singleLayer");
         var firstLayerType = is3DLayer(selectedLayers[0]);
 
 
@@ -74,7 +74,7 @@ function applyCreateNull() {
             var averageZ = sumZ / selectedLayers.length;
         }
 
-        alert("singleLayer123");
+        // alert("singleLayer123");
         var nullLayer = functionAddNull(selectedComp,settings.createNull.isNullCenter);
 
         if (firstLayerType) {
@@ -87,14 +87,14 @@ function applyCreateNull() {
 
 
         if (firstLayerType) {
-            alert("3D单图层设置")
+            // alert("3D单图层设置")
             nullLayer.xRotation.setValue(selectedLayers[0].xRotation.value);
             nullLayer.yRotation.setValue(selectedLayers[0].yRotation.value);
             nullLayer.zRotation.setValue(selectedLayers[0].zRotation.value);
             nullLayer.orientation.setValue(selectedLayers[0].orientation.value);
         }
         else {
-            alert("2D单图层")
+            // alert("2D单图层")
             nullLayer.rotation.setValue(selectedLayers[0].rotation.value);
         }
 
@@ -111,7 +111,7 @@ function applyCreateNull() {
 
     var firstLayerType = is3DLayer(selectedLayers[0]);
 
-    alert(firstLayerType);
+    // alert(firstLayerType);
 
     var sumX = 0.0;
     var sumY = 0.0;
@@ -159,14 +159,14 @@ function applyCreateNull() {
 
     if (selectedLayers.length === 1) {
         if (firstLayerType) {
-            alert("3D单图层设置")
+            // alert("3D单图层设置")
             nullLayer.xRotation.setValue(selectedLayers[0].xRotation.value);
             nullLayer.yRotation.setValue(selectedLayers[0].yRotation.value);
             nullLayer.zRotation.setValue(selectedLayers[0].zRotation.value);
             nullLayer.orientation.setValue(selectedLayers[0].orientation.value);
         }
         else {
-            alert("2D单图层")
+            // alert("2D单图层")
             nullLayer.rotation.setValue(selectedLayers[0].rotation.value);
         }
     }
