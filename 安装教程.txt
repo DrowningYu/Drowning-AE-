@@ -3,3 +3,8 @@
 ……\Adobe After Effects 202X\Support Files\Scripts\ScriptUI Panels（你的AE安装目录）
 
 如果是要更新 直接覆盖即可
+
+
+安装完毕之后 在AE首选项中设置“允许脚本访问网络”
+脚本在 “窗口”下拉菜单中的DrowningYu中
+脚本可停靠在AE界面上
