@@ -22,10 +22,10 @@ function applyLyricYu(link,translateFlag,input_comp_fra){
         alert("单曲合成已创建");
     }
     else if(type===2){//歌单
-        alert("歌单功能已被阉割 如果想继续使用可以启动隐藏在帮助界面的老版本（老版本需要进行一些设置）");
+        alert("歌单功能已被阉割 如果想继续使用可以启动隐藏在帮助界面的老版本（旧版本需要进行一些设置）");
     }
     else if(type===3){//专辑
-        alert("专辑功能已被阉割 如果想继续使用可以启动隐藏在帮助界面的老版本（老版本需要进行一些设置）");
+        alert("专辑功能已被阉割 如果想继续使用可以启动隐藏在帮助界面的老版本（旧版本需要进行一些设置）");
     }
     else if(type===4){//歌手
         alert("歌手功能没有做");
@@ -84,7 +84,7 @@ function helpLyricYu(){
 
 
     var button2 = dialog.add("button", undefined, undefined, { name: "button2" });
-    button2.text = "启用老版";
+    button2.text = "启用旧版";
     button2.onClick = function () {
         dialog.close();
         
