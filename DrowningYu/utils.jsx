@@ -348,7 +348,25 @@ function eulerFromQuaternion(q) {
 }
 
 
+// 编码函数：将文本转换为十六进制字符串
+function encodeText(input) {
+    var encoded = "";
+    for (var i = 0; i < input.length; i++) {
+        var hex = input.charCodeAt(i).toString(16);
+        encoded += ("0000" + hex).slice(-4); // 确保长度为4的十六进制数
+    }
+    return encoded;
+}
 
+// 解码函数：将十六进制字符串转换回文本
+function decodeText(encoded) {
+    var decoded = "";
+    for (var i = 0; i < encoded.length; i += 4) {
+        var hex = encoded.substr(i, 4);
+        decoded += String.fromCharCode(parseInt(hex, 16));
+    }
+    return decoded;
+}
 
 
 

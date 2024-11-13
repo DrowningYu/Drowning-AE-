@@ -10,7 +10,7 @@
 #include "DrowningYu/createNull/createNull.jsx"
 #include "DrowningYu/splitShape/splitShape.jsx"
 #include "DrowningYu/reAnchor/reAnchor.jsx"
-
+#include "DrowningYu/expressions/expressions.jsx"
 
 
 
@@ -464,35 +464,11 @@ function mainFunction(defaultPanel) {
         //--------------------------------------------------------------------------------------------------------------------------------tab2
 
 
-        var dropdown1_array = ["Item 1", "Item 2"];
-        var dropdown1 = tab2.add("dropdownlist", undefined, undefined, { name: "dropdown1", items: dropdown1_array });
-        dropdown1.selection = 0;
 
-        var edittext1 = tab2.add('edittext {size: [200,250], properties: {name: "edittext1", multiline: true}}');
-        edittext1.text = "该功能没做完";
 
-        // GROUP1
-        // ======
-        var group1 = tab2.add("group", undefined, { name: "group1" });
-        group1.orientation = "row";
-        group1.alignChildren = ["left", "center"];
-        group1.spacing = 10;
-        group1.margins = 0;
+        tab2=renderTab2(tab2);
 
-        var statictext2 = group1.add("statictext", undefined, undefined, { name: "statictext2" });
-        statictext2.text = "表达式名称";
 
-        var edittext2 = group1.add('edittext {properties: {name: "edittext2"}}');
-        edittext2.text = "EditText";
-
-        var button1 = group1.add("button", undefined, undefined, { name: "button1" });
-        button1.text = "保存";
-
-        var button2 = group1.add("button", undefined, undefined, { name: "button2" });
-        button2.text = "删除";
-
-        var button3 = group1.add("button", undefined, undefined, { name: "button3" });
-        button3.text = "应用";
 
 
 
